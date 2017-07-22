@@ -1,2 +1,156 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+.box {
+  border: thick solid black;
+}
+
+.btn-success {
+  background: linear-gradient(0deg, #0099F7, #F11712 50%) no-repeat;
+}
+
+.btn-danger {
+  background: linear-gradient(0deg, #0099F7, #F11712 50%) no-repeat;
+}
+
+.game-cell {
+  font-size: 100px;
+  height: 150px;
+  text-align: center;
+  background: linear-gradient(0deg, #3494E6, #EC6EAD 50%) no-repeat;
+}
+
+.game-text-box {
+  height: 100px;
+  text-align: left;
+  height: 100%;
+}
+
+// body {
+//   background-color: #eee;
+// }
+
+.game-title-box {
+  font-size: 500px;
+  font-family: 'Gill Sans'cursive;
+  height: 100px;
+  text-align: center;
+  height: 100%;
+  font-size: 1em;
+  background-color: #222;
+  background-image:
+    radial-gradient(
+      hsla(0,0%,100%,.6) 40%,
+      hsla(0,0%,100%,0) 60%
+      ),
+    radial-gradient(
+      hsla(0,0%,100%,.6) 40%,
+      hsla(0,0%,100%,0) 60%
+      ),
+    radial-gradient(
+      hsla(0,0%,100%,.6) 40%,
+      hsla(0,0%,100%,0) 60%
+      ),
+    radial-gradient(
+      white 50%,
+      hsla(0,0%,100%,0) 53%
+      ),
+    radial-gradient(
+      white 50%,
+      hsla(0,0%,100%,0) 53%
+      ),
+    radial-gradient(
+      white 50%,
+      hsla(0,0%,100%,0) 53%
+      ),
+    radial-gradient(
+      white 50%,
+      hsla(0,0%,100%,0) 53%
+      ),
+    radial-gradient(
+      hsla(0,0%,100%,.6) 40%,
+      hsla(0,0%,100%,0) 60%
+      ),
+
+    radial-gradient(
+      hsl(200,80%,60%),
+      hsl(60,0%,20%)
+      );
+  background-position:
+    50% 50%,
+    calc(50% + 3em) calc(50% - .5em),
+    calc(50% + 4em) calc(50% - 1.5em),
+    calc(50% + 3em) calc(50% - 2.5em),
+    50% calc(50% - 3em),
+    calc(50% - 3em) calc(50% - 2.5em),
+    calc(50% - 4em) calc(50% - 1.5em),
+    calc(50% - 3em) calc(50% - .5em),
+
+    0 0;
+  background-size:
+    3em 3em,
+    2.5em 3em,
+    1em 3em,
+    2.5em 3em,
+    3em 3em,
+    2.5em 3em,
+    1em 3em,
+    2.5em 3em,
+
+    100% 100%;
+  background-repeat: no-repeat;
+  animation: .3s ring linear infinite reverse;
+  }
+
+
+@keyframes ring {
+  0% {
+    background-position:
+      50% 50%,
+      calc(50% + 3em) calc(50% - .5em),
+      calc(50% + 4em) calc(50% - 1.5em),
+      calc(50% + 3em) calc(50% - 2.5em),
+      50% calc(50% - 3em),
+      calc(50% - 3em) calc(50% - 2.5em),
+      calc(50% - 4em) calc(50% - 1.5em),
+      calc(50% - 3em) calc(50% - .5em),
+
+      0 0;
+    background-size:
+      3em 3em,
+      2.5em 3em,
+      1em 3em,
+      2.5em 3em,
+      3em 3em,
+      2.5em 3em,
+      1em 3em,
+      2.5em 3em,
+
+      100% 100%;
+    }
+  100% {
+    background-position:
+      calc(50% - 3em) calc(50% - .5em),
+      50% 50%,
+      calc(50% + 3em) calc(50% - .5em),
+      calc(50% + 4em) calc(50% - 1.5em),
+      calc(50% + 3em) calc(50% - 2.5em),
+      50% calc(50% - 3em),
+      calc(50% - 3em) calc(50% - 2.5em),
+      calc(50% - 4em) calc(50% - 1.5em),
+
+      0 0;
+    background-size:
+      2.5em 3em,
+      3em 3em,
+      2.5em 3em,
+      1em 3em,
+      2.5em 3em,
+      3em 3em,
+      2.5em 3em,
+      1em 3em,
+
+      100% 100%;
+    }
+  }

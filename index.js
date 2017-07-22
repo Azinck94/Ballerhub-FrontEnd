@@ -9,3 +9,6 @@ require('./assets/scripts/index.js')
 
 // styles
 require('./assets/styles/index.scss')
+require('expose?getFormFields!./lib/get-form-fields.js');
+
+//jquery

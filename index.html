@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Baller Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add q`script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <p>Select from the database </p>
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+<div class="container">
+  <div class="row">
+    <div id="game-title" class="col-sm-9 box game-title-box">
+      <h1>Baller-Hub</h1>
+    </div>
+  </div>
+</div>
+<!-- Game Text Box -->
+<div class="container">
+  <div class="row">
+    <div id="game-text" class="col-sm-9 box game-text-log">
+      <h3>By Andrew Zinck</h3>
+    </div>
+  </div>
+</div>
 
+<div class="container">
+  <div class="row">
+    <div id="game-log" class="col-sm-9 box game-log">
+      <h3>Please sign-in!-</h3>
+    </div>
+  </div>
+</div>
 
 <form id="sign-up">
        <fieldset>
@@ -34,12 +53,6 @@
          <input type="submit" name="submit" value="Sign in!">
        </fieldset>
      </form>
-     <form id="sign-out">
-       <fieldset>
-         <legend>Sign out!</legend>
-         <input type="submit" name="submit" value="Sign out!">
-       </fieldset>
-     </form>
      <form id="change-password">
        <fieldset>
          <legend>Change Password</legend>
@@ -48,16 +61,49 @@
          <input type="submit" name="submit" value="Change Password">
        </fieldset>
      </form>
-     <form id="search-baller">
+     <form id="sign-out">
        <fieldset>
-         <legend>Search Baller</legend>
-         <input type="password" name="first_name" value="" placeholder="Old Password">
-         <input type="password" name="passwords[new]" value="" placeholder="New Password">
-         <input type="submit" name="submit" value="Change Password">
+         <legend>Sign out!</legend>
+         <input type="submit" name="submit" value="Sign out!">
        </fieldset>
      </form>
 
-</html>
 
-    </body>
+
+  <!-- /.container-fluid -->
+
+
+
+<div class="container">
+  <div class="row">
+    <div id="list-games-log" class="col-sm-9 box list-games-log">
+      <h3>How Many Games Have I Played?-</h3>
+    </div>
+  </div>
+</div>
+<!-- Gameboard -->
+<!-- Center block should help center, but am having trouble -->
+<div id="game-board" class="container">
+  <div class="row">
+    <div id="box0" class="col-xs-3 box game-cell"></div>
+    <div id="box1" class="col-xs-3 box game-cell"></div>
+    <div id="box2" class="col-xs-3 box game-cell"></div>
+  </div>
+  <div class="row">
+    <div id="box3" class="col-xs-3 box game-cell"></div>
+    <div id="box4" class="col-xs-3 box game-cell"></div>
+    <div id="box5" class="col-xs-3 box game-cell"></div>
+  </div>
+  <div class="row">
+    <div id="box6" class="col-xs-3 box game-cell"></div>
+    <div id="box7" class="col-xs-3 box game-cell"></div>
+    <div id="box8" class="col-xs-3 box game-cell"></div>
+  </div>
+</div>
+<!-- Standard button for new game -->
+<button id="new-game-button" type="button" class="btn btn-default">New Game</button>
+<button id="list-all-games" type="button" class="btn btn-default">List Games</button>
+
+
+
 </html>
