@@ -1,10 +1,10 @@
 'use strict';
 
-//declare variable app with key api that has a value of our server location
+//declare ./app with api key
 const app = {
-  api: 'https://ballerhub.herokuapp.com/',
-
+api: 'http://localhost:4741'
+  //api: 'https://ballerhub.herokuapp.com/'
 };
 
-//exports the variable containing the server location to be used in other files.
+//exports app with server to be used in other files
 module.exports = app;
