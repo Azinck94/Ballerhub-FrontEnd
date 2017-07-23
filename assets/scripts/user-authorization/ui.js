@@ -13,6 +13,9 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log("You signed in");
+  $('#sign-up').modal('hide')
+};
+const signUpSuccess = (data) => {
 };
 
 const signOutSuccess = () => {

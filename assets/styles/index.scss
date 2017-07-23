@@ -30,127 +30,420 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 // body {
 //   background-color: #eee;
 // }
+body {
+	padding: 1px;
+	height: 400px;
+}
 
-.game-title-box {
-  font-size: 500px;
-  font-family: 'Gill Sans'cursive;
-  height: 100px;
-  text-align: center;
-  height: 100%;
-  font-size: 1em;
-  background-color: #222;
-  background-image:
-    radial-gradient(
-      hsla(0,0%,100%,.6) 40%,
-      hsla(0,0%,100%,0) 60%
-      ),
-    radial-gradient(
-      hsla(0,0%,100%,.6) 40%,
-      hsla(0,0%,100%,0) 60%
-      ),
-    radial-gradient(
-      hsla(0,0%,100%,.6) 40%,
-      hsla(0,0%,100%,0) 60%
-      ),
-    radial-gradient(
-      white 50%,
-      hsla(0,0%,100%,0) 53%
-      ),
-    radial-gradient(
-      white 50%,
-      hsla(0,0%,100%,0) 53%
-      ),
-    radial-gradient(
-      white 50%,
-      hsla(0,0%,100%,0) 53%
-      ),
-    radial-gradient(
-      white 50%,
-      hsla(0,0%,100%,0) 53%
-      ),
-    radial-gradient(
-      hsla(0,0%,100%,.6) 40%,
-      hsla(0,0%,100%,0) 60%
-      ),
+p {
+	margin: 220px 0 0 0;
+	-webkit-transform: scale(0.5, 0.5);
+	-moz-transform: scale(0.5, 0.5);
+	-ms-transform: scale(0.5, 0.5);
+	-o-transform: scale(0.5, 0.5);
+	transform: scale(0.5, 0.5);
 
-    radial-gradient(
-      hsl(200,80%,60%),
-      hsl(60,0%,20%)
-      );
-  background-position:
-    50% 50%,
-    calc(50% + 3em) calc(50% - .5em),
-    calc(50% + 4em) calc(50% - 1.5em),
-    calc(50% + 3em) calc(50% - 2.5em),
-    50% calc(50% - 3em),
-    calc(50% - 3em) calc(50% - 2.5em),
-    calc(50% - 4em) calc(50% - 1.5em),
-    calc(50% - 3em) calc(50% - .5em),
+	-webkit-animation: jump 1s infinite;
+	-moz-animation: jump 1s infinite;
+	-ms-animation: jump 1s infinite;
+	-o-animation: jump 1s infinite;
+	animation: jump 1s infinite;
+}
 
-    0 0;
-  background-size:
-    3em 3em,
-    2.5em 3em,
-    1em 3em,
-    2.5em 3em,
-    3em 3em,
-    2.5em 3em,
-    1em 3em,
-    2.5em 3em,
+p::before {
+	content: '';
+	position: absolute;
+	top: 45%;
+	left: 50%;
 
-    100% 100%;
-  background-repeat: no-repeat;
-  animation: .3s ring linear infinite reverse;
-  }
+	-webkit-transform: rotate(-25deg) scaleY(1.8) translate(-112px,-70px);
+    -moz-transform: rotate(-25deg) scaleY(1.8) translate(-112px,-70px);
+    -o-transform: rotate(-25deg) scaleY(1.8) translate(-112px,-70px);
+    -ms-transform: rotate(-25deg) scaleY(1.8) translate(-112px,-70px);
+    transform: rotate(-25deg) scaleY(1.8) translate(-112px,-70px);
 
+	z-index: 1;
+    width: 160px;
+    height: 160px;
 
-@keyframes ring {
-  0% {
-    background-position:
-      50% 50%,
-      calc(50% + 3em) calc(50% - .5em),
-      calc(50% + 4em) calc(50% - 1.5em),
-      calc(50% + 3em) calc(50% - 2.5em),
-      50% calc(50% - 3em),
-      calc(50% - 3em) calc(50% - 2.5em),
-      calc(50% - 4em) calc(50% - 1.5em),
-      calc(50% - 3em) calc(50% - .5em),
+	-webkit-border-radius: 92px;
+	-moz-border-radius: 92px;
+	border-radius: 92px;
 
-      0 0;
-    background-size:
-      3em 3em,
-      2.5em 3em,
-      1em 3em,
-      2.5em 3em,
-      3em 3em,
-      2.5em 3em,
-      1em 3em,
-      2.5em 3em,
+	border: 12px solid #ce4075;
 
-      100% 100%;
-    }
-  100% {
-    background-position:
-      calc(50% - 3em) calc(50% - .5em),
-      50% 50%,
-      calc(50% + 3em) calc(50% - .5em),
-      calc(50% + 4em) calc(50% - 1.5em),
-      calc(50% + 3em) calc(50% - 2.5em),
-      50% calc(50% - 3em),
-      calc(50% - 3em) calc(50% - 2.5em),
-      calc(50% - 4em) calc(50% - 1.5em),
+}
 
-      0 0;
-    background-size:
-      2.5em 3em,
-      3em 3em,
-      2.5em 3em,
-      1em 3em,
-      2.5em 3em,
-      3em 3em,
-      2.5em 3em,
-      1em 3em,
+p::after {
+	content: '';
+	position: absolute;
+	top: 45%;
+	left: 50%;
+    width: 184px;
+    height: 184px;
 
-      100% 100%;
-    }
-  }
+    -webkit-border-radius: 212px;
+	-moz-border-radius: 212px;
+    border-radius: 212px;
+
+	border: 120px solid #fff;
+    margin: -212px 0 0 -212px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+a {
+	top: 45%;
+	left: 50%;
+	position: absolute;
+    text-indent:-8000px;
+    margin:-92px 0 0 -92px;
+    background: #f26398;
+    width:160px;
+    height:160px;
+
+	-webkit-border-radius: 92px;
+	-moz-border-radius: 92px;
+	border-radius: 92px;
+
+    border:12px solid #ce4075;
+}
+
+a::before {
+	content: '';
+	position: absolute;
+    top:-110px;
+    left:-50px;
+
+    -webkit-transform:rotate(-10deg) scaleX(1.5);
+    -moz-transform:rotate(-10deg) scaleX(1.5);
+    -o-transform:rotate(-10deg) scaleX(1.5);
+    -ms-transform:rotate(-10deg) scaleX(1.5);
+    transform:rotate(-10deg) scaleX(1.5);
+
+    z-index: 1;
+    width:160px;
+    height:160px;
+
+	-webkit-border-radius: 92px;
+	-moz-border-radius: 92px;
+	border-radius: 92px;
+
+    border:12px solid #ce4075;
+}
+
+a::after {
+	content: '';
+	position: absolute;
+    top:75px;
+    left:30px;
+
+    -webkit-transform:rotate(-10deg) scaleX(1.2);
+    -moz-transform:rotate(-10deg) scaleX(1.2);
+    -o-transform:rotate(-10deg) scaleX(1.2);
+    -ms-transform:rotate(-10deg) scaleX(1.2);
+    transform:rotate(-10deg) scaleX(1.2);
+    transform:rotate(-10deg) scaleX(1.2);
+
+    width:160px;
+    height:160px;
+
+	-webkit-border-radius: 92px;
+	-moz-border-radius: 92px;
+	border-radius: 92px;
+
+    border:12px solid #ce4075;
+}
+
+span.highlight {
+	background: #fba0c1;
+	width: 120px;
+	height: 80px;
+	position: absolute;
+	left: 22px;
+	top: 8px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	z-index: 0;
+}
+
+span.shadow {
+	width: 90px;
+	height: 0px;
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 265px;
+	z-index: 3;
+	left: 50%;
+	margin-left: -45px;
+
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+
+	-webkit-animation: shrink 1s infinite;
+	-moz-animation: shrink 1s infinite;
+	-ms-animation: shrink 1s infinite;
+	-o-animation: shrink 1s infinite;
+	animation: shrink 1s infinite;
+}
+
+@-webkit-keyframes jump {
+	0% {margin-top: 50px; -webkit-transform: scale(0.5,0.5);
+		-webkit-animation-timing-function: ease-in;
+	}
+	40% {-webkit-transform: scale(0.5,0.5)}
+	50% {margin-top: 220px; -webkit-transform: scale(0.5,0.35);
+		-webkit-animation-timing-function: ease-out;
+	}
+	60% {-webkit-transform: scale(0.5,0.5)}
+	100% {margin-top: 50px; -webkit-transform: scale(0.5,0.5);
+		-webkit-animation-timing-function: ease-in;
+	}
+}
+
+@-webkit-keyframes shrink {
+	0% {width: 60px; margin-left: -30px;
+		-webkit-animation-timing-function: ease-in;
+	}
+	50% {width: 90px; margin-left: -45px;
+		-webkit-animation-timing-function: ease-out;
+	}
+	100% {width: 60px; margin-left: -30px;
+		-webkit-animation-timing-function: ease-in;
+	}
+}
+
+@-moz-keyframes jump {
+	0% {margin-top: 50px; -moz-transform: scale(0.5,0.5);
+		-moz-animation-timing-function: ease-in;
+	}
+	40% {-moz-transform: scale(0.5,0.5)}
+	50% {margin-top: 220px; -moz-transform: scale(0.5,0.35);
+		-moz-animation-timing-function: ease-out;
+	}
+	60% {-moz-transform: scale(0.5,0.5)}
+	100% {margin-top: 50px; -moz-transform: scale(0.5,0.5);
+		-moz-animation-timing-function: ease-in;
+	}
+}
+
+@-moz-keyframes shrink {
+	0% {width: 60px; margin-left: -30px;
+		-moz-animation-timing-function: ease-in;
+	}
+	50% {width: 90px; margin-left: -45px;
+		-moz-animation-timing-function: ease-out;
+	}
+	100% {width: 60px; margin-left: -30px;
+		-moz-animation-timing-function: ease-in;
+	}
+}
+
+@-ms-keyframes jump {
+	0% {margin-top: 50px; -ms-transform: scale(0.5,0.5);
+		-ms-animation-timing-function: ease-in;
+	}
+	40% {-ms-transform: scale(0.5,0.5)}
+	50% {margin-top: 220px; -ms-transform: scale(0.5,0.35);
+		-ms-animation-timing-function: ease-out;
+	}
+	60% {-ms-transform: scale(0.5,0.5)}
+	100% {margin-top: 50px; -ms-transform: scale(0.5,0.5);
+		-ms-animation-timing-function: ease-in;
+	}
+}
+
+@-ms-keyframes shrink {
+	0% {width: 60px; margin-left: -30px;
+		-ms-animation-timing-function: ease-in;
+	}
+	50% {width: 90px; margin-left: -45px;
+		-ms-animation-timing-function: ease-out;
+	}
+	100% {width: 60px; margin-left: -30px;
+		-ms-animation-timing-function: ease-in;
+	}
+}
+
+@-o-keyframes jump {
+	0% {margin-top: 50px; -o-transform: scale(0.5,0.5);
+		-o-animation-timing-function: ease-in;
+	}
+	40% {-o-transform: scale(0.5,0.5)}
+	50% {margin-top: 220px; -o-transform: scale(0.5,0.35);
+		-o-animation-timing-function: ease-out;
+	}
+	60% {-ms-transform: scale(0.5,0.5)}
+	100% {margin-top: 50px; -o-transform: scale(0.5,0.5);
+		-o-animation-timing-function: ease-in;
+	}
+}
+
+@-o-keyframes shrink {
+	0% {width: 60px; margin-left: -30px;
+		-o-animation-timing-function: ease-in;
+	}
+	50% {width: 90px; margin-left: -45px;
+		-o-animation-timing-function: ease-out;
+	}
+	100% {width: 60px; margin-left: -30px;
+		-o-animation-timing-function: ease-in;
+	}
+}
+
+@keyframes jump {
+	0% {margin-top: 50px; transform: scale(0.5,0.5);
+		animation-timing-function: ease-in;
+	}
+	40% {transform: scale(0.5,0.5)}
+	50% {margin-top: 220px; transform: scale(0.5,0.35);
+		animation-timing-function: ease-out;
+	}
+	60% {-ms-transform: scale(0.5,0.5)}
+	100% {margin-top: 50px; transform: scale(0.5,0.5);
+		animation-timing-function: ease-in;
+	}
+}
+
+@keyframes shrink {
+	0% {width: 60px; margin-left: -30px;
+		animation-timing-function: ease-in;
+	}
+	50% {width: 90px; margin-left: -45px;
+		animation-timing-function: ease-out;
+	}
+	100% {width: 60px; margin-left: -30px;
+		animation-timing-function: ease-in;
+	}
+}
+// .game-title-box {
+//   font-size: 500px;
+//   font-family: 'Gill Sans'cursive;
+//   height: 100px;
+//   text-align: center;
+//   height: 100%;
+//   font-size: 1em;
+//   background-color: #222;
+//   background-image:
+//     radial-gradient(
+//       hsla(0,0%,100%,.6) 40%,
+//       hsla(0,0%,100%,0) 60%
+//       ),
+//     radial-gradient(
+//       hsla(0,0%,100%,.6) 40%,
+//       hsla(0,0%,100%,0) 60%
+//       ),
+//     radial-gradient(
+//       hsla(0,0%,100%,.6) 40%,
+//       hsla(0,0%,100%,0) 60%
+//       ),
+//     radial-gradient(
+//       white 50%,
+//       hsla(0,0%,100%,0) 53%
+//       ),
+//     radial-gradient(
+//       white 50%,
+//       hsla(0,0%,100%,0) 53%
+//       ),
+//     radial-gradient(
+//       white 50%,
+//       hsla(0,0%,100%,0) 53%
+//       ),
+//     radial-gradient(
+//       white 50%,
+//       hsla(0,0%,100%,0) 53%
+//       ),
+//     radial-gradient(
+//       hsla(0,0%,100%,.6) 40%,
+//       hsla(0,0%,100%,0) 60%
+//       ),
+//
+//     radial-gradient(
+//       hsl(200,80%,60%),
+//       hsl(60,0%,20%)
+//       );
+//   background-position:
+//     50% 50%,
+//     calc(50% + 3em) calc(50% - .5em),
+//     calc(50% + 4em) calc(50% - 1.5em),
+//     calc(50% + 3em) calc(50% - 2.5em),
+//     50% calc(50% - 3em),
+//     calc(50% - 3em) calc(50% - 2.5em),
+//     calc(50% - 4em) calc(50% - 1.5em),
+//     calc(50% - 3em) calc(50% - .5em),
+//
+//     0 0;
+//   background-size:
+//     3em 3em,
+//     2.5em 3em,
+//     1em 3em,
+//     2.5em 3em,
+//     3em 3em,
+//     2.5em 3em,
+//     1em 3em,
+//     2.5em 3em,
+//
+//     100% 100%;
+//   background-repeat: no-repeat;
+//   animation: .3s ring linear infinite reverse;
+//   }
+//
+//
+// @keyframes ring {
+//   0% {
+//     background-position:
+//       50% 50%,
+//       calc(50% + 3em) calc(50% - .5em),
+//       calc(50% + 4em) calc(50% - 1.5em),
+//       calc(50% + 3em) calc(50% - 2.5em),
+//       50% calc(50% - 3em),
+//       calc(50% - 3em) calc(50% - 2.5em),
+//       calc(50% - 4em) calc(50% - 1.5em),
+//       calc(50% - 3em) calc(50% - .5em),
+//
+//       0 0;
+//     background-size:
+//       3em 3em,
+//       2.5em 3em,
+//       1em 3em,
+//       2.5em 3em,
+//       3em 3em,
+//       2.5em 3em,
+//       1em 3em,
+//       2.5em 3em,
+//
+//       100% 100%;
+//     }
+//   100% {
+//     background-position:
+//       calc(50% - 3em) calc(50% - .5em),
+//       50% 50%,
+//       calc(50% + 3em) calc(50% - .5em),
+//       calc(50% + 4em) calc(50% - 1.5em),
+//       calc(50% + 3em) calc(50% - 2.5em),
+//       50% calc(50% - 3em),
+//       calc(50% - 3em) calc(50% - 2.5em),
+//       calc(50% - 4em) calc(50% - 1.5em),
+//
+//       0 0;
+  //   background-size:
+  //     2.5em 3em,
+  //     3em 3em,
+  //     2.5em 3em,
+  //     1em 3em,
+  //     2.5em 3em,
+  //     3em 3em,
+  //     2.5em 3em,
+  //     1em 3em,
+  //
+  //     100% 100%;
+  //   }
+  // }

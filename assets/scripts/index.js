@@ -4,7 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const getFormFields = require('../../lib/get-form-fields');
 const authEvents = require('./user-authorization/events');
-const playerEvents = require('./player-requests/events');
+// const playerEvents = require('./player-requests/events');
 
 $(() => {
   setAPIOrigin(location, config)
@@ -44,4 +44,3 @@ $(() => {
     $('.sign-out-btn').on('click', function(){
       $('#sign-out').modal('hide');
        });
-    });
