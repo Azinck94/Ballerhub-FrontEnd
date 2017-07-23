@@ -23,7 +23,7 @@ const onShowAllBallers = function (event) {
 
 const addHandlers = function () {
   $('#create-baller').on('submit', onCreateballer)
-  $('#show-all-ballers').on('click', onShowAllballers)
+  $('#ballers-list').on('click', onShowAllballers)
   $('#delete-baller').on('submit', onDeleteballer)
   $('#update-baller').on('submit', onUpdateballer)
   // $('.baller-board').on('click', '.card', onAddToMenu)
