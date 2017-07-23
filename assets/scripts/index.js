@@ -10,6 +10,10 @@ $(() => {
   setAPIOrigin(location, config)
 })
 
+$(document).on('click', '.add-player-button', function(){
+   playerEvents.onAddPlayer(this.id);
+});
+
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -19,21 +23,25 @@ require('./example')
 $(() => {
     authEvents.addHandlers();
     playerEvents.addHandlers();
-  $('#select-sign-up').on('click', function(){
-    $('#sign-up-modal').modal('show');
+  // $('#select-sign-up').on('click', function(){
+  //   $('#sign-up-modal').modal('show');
   });
   $('.sign-up-btn').on('click', function(){
-    $('#sign-up-modal').modal('hide');
+    $('#sign-up').modal('hide');
   });
   $('#select-sign-in').on('click', function(){
     $('#sign-in-modal').modal('show');
   });
   $('.sign-in-btn').on('click', function(){
-    $('#sign-in-modal').modal('hide');
+    $('#sign-in').modal('hide');
   });
-  $('#select-change-password').on('click', function(){
-    $('#change-password-modal').modal('show');
-  });
+  // $('#select-change-password').on('click', function(){
+  //   $('#change-password').modal('show');
+  // });
   $('.change-password-btn').on('click', function(){
     $('#change-password-modal').modal('hide');
-  });
+ });
+    $('.sign-out-btn').on('click', function(){
+      $('#sign-out').modal('hide');
+       });
+    });
