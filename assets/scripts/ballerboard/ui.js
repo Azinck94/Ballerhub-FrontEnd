@@ -5,11 +5,12 @@ const showBallers = require('../templates/baller-database.handlebars')
 const createBallerSuccess = (data) => {}
 
 const createBallerFailure = () => {}
+
 const showAllBallersSuccess = (data) => {
   store.ballers = data.ballers
   $('.baller-board').empty()
   $('.create-baller').val('')
-  $('#create-baller-modal').modal('hide')
+  // $('#create-baller-modal').modal('hide')
   let showBallersHtml = showBallersTemp({
     ballers: data.ballers
   })

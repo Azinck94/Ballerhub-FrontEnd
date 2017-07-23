@@ -4,7 +4,7 @@ const config = require('../config.js')
 const store = require('../store')
 
 
-const createballer = function (data) {
+const createBaller = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/ballers',
     method: 'POST',

@@ -9,9 +9,9 @@ const ui = require('./ui')
 const onCreateBaller = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  api.createballer(data)
+  api.createBaller(data)
     .then(onShowAllballers)
-    .catch(ui.createballerFailure)
+    .catch(ui.createBallerFailure)
 }
 
 const onShowAllBallers = function (event) {
@@ -22,10 +22,10 @@ const onShowAllBallers = function (event) {
 }
 
 const addHandlers = function () {
-  $('#create-baller').on('submit', onCreateballer)
-  $('#ballers-list').on('click', onShowAllballers)
-  $('#delete-baller').on('submit', onDeleteballer)
-  $('#update-baller').on('submit', onUpdateballer)
+  $('#create-baller').on('submit', onCreateBaller)
+  $('#ballers-list').on('click', onShowAllBallers)
+  $('#delete-baller').on('submit', onDeleteBaller)
+  $('#update-baller').on('submit', onUpdateBaller)
   // $('.baller-board').on('click', '.card', onAddToMenu)
   // $('#show-menu-button').on('click', onShowMenu)
 }
