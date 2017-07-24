@@ -1,18 +1,23 @@
 'use strict'
 
-const setAPIOrigin = require('../../lib/set-api-origin')
+const setAPIOrigin = require('../../lib/set-api-origin.js')
 const config = require('./config')
-const getFormFields = require('../../lib/get-form-fields');
-const authEvents = require('./user-authorization/events');
-// const playerEvents = require('./player-requests/events');
+const getFormFields = require('../../lib/get-form-fields.js');
+const authEvents = require('./user-authorization/events.js');
+const ballerboardEvents = require('./ballerboard/events.js');
+
+// const ballerEvents = require('./player-requests/events');
 
 $(() => {
   setAPIOrigin(location, config)
+  authEvents.addHandlers()
+  ballerboardEvents.addHandlers()
 })
+//button to hopefully end up adding a player that has been created to the user's team
 
-$(document).on('click', '.add-player-button', function(){
-   playerEvents.onAddPlayer(this.id);
-});
+ //$(document).on('click', '.add-baller-button', function(){
+//   ballerboardEvents.onAddBaller(this.id);
+// });
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -22,7 +27,7 @@ require('./example')
 
 $(() => {
     authEvents.addHandlers();
-    playerEvents.addHandlers();
+    ballerboardEvents.addHandlers();
   // $('#select-sign-up').on('click', function(){
   //   $('#sign-up-modal').modal('show');
   });
@@ -44,3 +49,5 @@ $(() => {
     $('.sign-out-btn').on('click', function(){
       $('#sign-out').modal('hide');
        });
+
+require('./example')

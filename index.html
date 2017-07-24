@@ -30,8 +30,16 @@
 
 <div class="container">
   <div class="row">
-    <div id="game-log" class="col-sm-9 box game-log">
+    <div id="sign-in-log" class="col-sm-9 box game-log">
       <h3>Please sign-in!</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div id="game-title" class="col-sm-9 box game-title-box">
+      <h1>Baller-Hub</h1>
     </div>
   </div>
 </div>
@@ -86,7 +94,7 @@
 <!-- Gameboard -->
 <!-- Center block should help center, but am having trouble -->
 <div class="row">
-  <div id="box6" class="col-xs-27 box game-cell"></div>
+  <div id="box6" class="col-xs-27 box baller-board"></div>
 <!-- <div id="game-board" class="container">
   <div class="row">
     <div id="box0" class="col-xs-3 box game-cell"></div>
@@ -111,9 +119,10 @@
 <div class="baller-content" id="baller-content">
   <h1> Show Me Ballers! </h1>
     </div>
+
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-baller-modal">
               Create baller
-              </button>
+        </button>
           <div class="modal fade" id="create-baller-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -124,34 +133,23 @@
               </button>
                 </div>
 
-                  <!-- t.string :first_name
-      t.string :last_name
-      t.string :team
-      t.string :position
-      t.integer :buckets
-      t.integer :rpg
-      t.integer :apg
-      t.string :sponsors
-      t.string :shoes
-      t.string :catchphrase -->
-      <!-- create-baller -->
                 <div class="modal-body">
                   <form id="create-baller">
                     <input class="create-baller" type="text" name="first_name" value="" placeholder="first_name">
                     <input class="create-baller" type="text" name="last_name" value="" placeholder="last_name">
-                    <input class="create-baller" type="text" name="team" value="" placeholder="ingredients">
+                    <input class="create-baller" type="text" name="team" value="" placeholder="team">
                     <input class="create-baller" type="text" name="position" value="" placeholder="position">
-                    <input class="create-baller" type="text" name="buckets" value="" placeholder="buckets">
-                    <input class="create-baller" type="text" name="rpg" value="" placeholder="rpg">
-                    <input class="create-baller" type="text" name="apg" value="" placeholder="apg">
+                    <input class="create-baller" type="integer" name="buckets" value="" placeholder="buckets">
+                    <input class="create-baller" type="integer" name="rpg" value="" placeholder="rpg">
+                    <input class="create-baller" type="integer" name="apg" value="" placeholder="apg">
                     <input class="create-baller" type="text" name="sponsors" value="" placeholder="sponsors">
                     <input class="create-baller" type="text" name="shoes" value="" placeholder="shoes">
                     <input class="create-baller" type="text" name="catchphrase" value="" placeholder="catchphrase">
                     <input type="submit" name="submit" value="Create Baller!">
                   </form>
                 </div>
-              <body>  <p><a href="#"><span class="highlight"></span></a></p>
+              <!-- <body>  <p><a href="#"><span class="highlight"></span></a></p>
                 <span class="shadow"></span>
-              </body>
+              </body> -->
 
 </html>

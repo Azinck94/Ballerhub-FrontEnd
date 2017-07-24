@@ -1,5 +1,12 @@
 {{#each beaches as |ballers|}}
 
+<div class="card">
+  <div class="card-block">
+    <h3 class="card-title" id="{{baller.id}}">{{baller.first_name}}</h3>
+    <h4 class="card-id">Baller ID #{{baller.id}}</h4>
+    <!-- <h5 class="card-on_menu">On Menu: #{{baller.on_menu}}</h5> -->
+  </div>
+
   <h2> Name: {{first_name}} {{last_name}}</h2>
   <h3> Team: {{team}} </h3>
   <h3> Position: {{position}} </h3>
