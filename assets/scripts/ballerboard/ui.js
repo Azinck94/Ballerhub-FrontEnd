@@ -2,20 +2,25 @@
 const store = require('../store')
 const showBallersTemplate = require('../templates/baller-database.handlebars')
 // const showMenuTemplate = require('../templates/show-menu.handlebars')
-const createBallerSuccess = (data) => {}
+const createBallerSuccess = (data) => {
+}
 
-const createBallerFailure = () => {}
+const createBallerFailure = (error) => {
+  console.log(error)
+}
 
 const showAllBallersSuccess = (data) => {
   console.log('ui running')
   store.ballers = data.ballers
-  $('.baller-board').empty()
+  $('p').empty()
   $('.create-baller').val('')
   $('#create-baller-modal').modal('hide')
+  $('.delete-baller').val('')
+$('#delete-baller-modal').modal('hide')
   // $('#create-baller-modal').modal('hide')
   let showBallersHtml = showBallersTemplate({
     ballers: data.ballers})
-  $('.baller-board').append(showBallersHtml)
+  $('p').append(showBallersHtml)
 
 };
 const showAllBallersFailure = () => {

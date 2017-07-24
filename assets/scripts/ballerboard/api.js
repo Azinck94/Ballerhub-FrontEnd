@@ -2,11 +2,16 @@
 
 const config = require('../config.js')
 const store = require('../store')
+const app =require('../app.js')
 
 
-const createBaller = (data) => {
+const createBaller = (baller) => {
   console.log('create entry in api running')
-  console.log(data)
+  console.log(baller)
+  const data = {
+    baller: null
+  }
+  data.baller = baller
   return $.ajax({
     url: config.apiOrigin + '/ballers',
     method: 'POST',
@@ -29,6 +34,7 @@ const showAllBallers = function (data) {
 }
 
 const deleteBaller = function (data) {
+  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/ballers/' + data,
     method: 'DELETE',

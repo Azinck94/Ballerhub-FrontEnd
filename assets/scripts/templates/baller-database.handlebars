@@ -1,26 +1,22 @@
-{{#each beaches as |ballers|}}
+{{#each ballers as |baller|}}
+
 
 <div class="card">
   <div class="card-block">
-    <h3 class="card-title" id="{{baller.id}}">{{baller.first_name}}</h3>
-    <h4 class="card-id">Baller ID #{{baller.id}}</h4>
-    <!-- <h5 class="card-on_menu">On Menu: #{{baller.on_menu}}</h5> -->
+    <h3 class="card-title" id="{{baller.id}}"></h3>
+
+    <!-- <h5 class="card-on_menu">On Menu: #{{recipe.on_menu}}</h5> -->
   </div>
 
-  <h2> Name: {{first_name}} {{last_name}}</h2>
-  <h3> Team: {{team}} </h3>
-  <h3> Position: {{position}} </h3>
-  <ul>
-    <li>Bucketz: {{buckets}} </li>
-    <li>RPG: {{rpg}} </li>
-    <li>APG: {{apg}} </li>
-    <li>Sponsors: {{sponsors}} </li>
-    <li>Shoes: {{shoes}} </li>
-    <li>Catchphrase: {{catchphrase}} </li>
-  </ul>
-
-
-
-
+    <h1> Baller ID #{{baller.id}}</h1>
+    <h1> Name: {{first_name}} {{last_name}}</h1>
+  <ul> Team: {{team}} </ul>
+  <ul> Position: {{position}} </ul>
+    <ul>Bucketz: {{buckets}} </ul>
+    <ul>RPG: {{rpg}} </ul>
+    <ul>APG: {{apg}} </ul>
+    <ul>Sponsors: {{sponsors}} </ul>
+    <ul>Shoes: {{shoes}} </ul>
+    <ul>Catchphrase: {{catchphrase}} </ul>
 
 {{/each}}
