@@ -5,11 +5,13 @@ const api = require('./api')
 const ui = require('./ui')
 
 const onSignUp = function (event) {
+const data = getFormFields(this)
   event.preventDefault()
-  let data = getFormFields(this)
+  // const data = getFormFields(this)
+  console.log(data)
   api.signUp(data)
     .done(ui.success)
-    .fail(ui.failure)
+    .fail(ui.signUpFailure)
 }
 
 const onSignIn = function (event) {

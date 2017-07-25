@@ -9,6 +9,10 @@ const failure = (error) => {
   console.error(error)
 }
 
+const signUpFailure = () => {
+  $('.sign-in-log').text('We may already have an account with that email')
+  $('.sign-up').val('')
+}
 const signInSuccess = (data) => {
   store.user = data.user
   $('#sign-in-log').text('Signed in')
