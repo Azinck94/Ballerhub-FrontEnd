@@ -2,8 +2,8 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://ballerhub.herokuapp.com/',
-    development: 'http://localhost:4741'
+    production: 'https://ballerhub.herokuapp.com/'
+    // development: 'http://localhost:4741'
   }
 }
 
