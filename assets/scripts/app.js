@@ -2,7 +2,7 @@
 
 //declare ./app with api key
 const app = {
-api: 'http://localhost:4741'
+api: 'https://ballerhub.herokuapp.com'
   //api: 'https://ballerhub.herokuapp.com/'
 };
 
