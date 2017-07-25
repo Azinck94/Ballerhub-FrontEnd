@@ -31,11 +31,13 @@ api.deleteBaller(data.baller.id)
 }
 
 const onUpdateBaller = function (event) {
+  console.log('update is working')
   const data = getFormFields(event.target)
+  console.log(data)
   event.preventDefault()
   api.updateBaller(data)
-    onShowAllBallers(event)
-    // .catch(ui.updateBallerFailure)
+    .then(onShowAllBallers)
+     .catch(ui.updateBallerFailure)
 }
 
 const addHandlers = function () {

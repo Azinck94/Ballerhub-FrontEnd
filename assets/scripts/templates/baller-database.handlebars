@@ -1,13 +1,7 @@
 {{#each ballers as |baller|}}
 
-
 <div class="card">
-  <div class="card-block">
-    <h3 class="card-title" id="{{baller.id}}"></h3>
-
-    <!-- <h5 class="card-on_menu">On Menu: #{{recipe.on_menu}}</h5> -->
-  </div>
-
+<div class="card-block">
     <h1> Baller ID #{{baller.id}}</h1>
     <h1> Name: {{first_name}} {{last_name}}</h1>
   <ul> Team: {{team}} </ul>
@@ -18,5 +12,7 @@
     <ul>Sponsors: {{sponsors}} </ul>
     <ul>Shoes: {{shoes}} </ul>
     <ul>Catchphrase: {{catchphrase}} </ul>
+</div>
+</div>
 
 {{/each}}

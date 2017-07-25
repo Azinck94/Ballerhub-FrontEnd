@@ -43,6 +43,24 @@ const deleteBaller = function (data) {
     }
   })
 }
+
+const updateBaller = (baller) => {
+  console.log('update entry in api running')
+  console.log(baller)
+  const data = {
+    baller: null
+  }
+  data.baller = baller
+  return $.ajax({
+    url: config.apiOrigin + '/ballers/' + baller.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 // const updateBaller = function (data) {
 //   return $.ajax({
 //     url: config.apiOrigin + '/ballers/' + data.baller.id,
@@ -57,5 +75,6 @@ module.exports = {
   createBaller,
   showAllBallers,
   deleteBaller,
+  updateBaller
   // updateBaller
 }
