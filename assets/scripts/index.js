@@ -14,6 +14,7 @@ $(() => {
   ballerboardEvents.addHandlers()
   $('#sign-out').hide()
   $('#change-password').hide()
+  $('#baller-section').hide()
 })
 //button to hopefully end up adding a player that has been created to the user's team
 
