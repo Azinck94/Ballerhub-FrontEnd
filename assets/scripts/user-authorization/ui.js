@@ -9,8 +9,12 @@ const failure = (error) => {
   console.error(error)
 }
 
+const signUpSuccess = () => {
+  $('#sign-in-log').text('Signed Up')
+  $('.sign-up').val('')
+
 const signUpFailure = () => {
-  $('.sign-in-log').text('We may already have an account with that email')
+  $('#sign-in-log').text('Email already in use')
   $('.sign-up').val('')
 }
 const signInSuccess = (data) => {
@@ -48,17 +52,19 @@ const signOutFailure = () => {
 }
 
 const changePasswordSuccess = () => {
-$('#sign-in-log').text('Password changed ')
+$('#sign-in-log').text('Password changed')
 }
 
 const changePasswordFailure = () => {
-  $('#sign-in-log').text('Password not changed ')
+  $('#sign-in-log').text('Password not changed')
 }
 
 module.exports = {
   success,
   failure,
+  signUpSuccess,
   signInSuccess,
+  signUpFailure,
   signInFailure,
   signOutSuccess,
   signOutFailure,
