@@ -12,6 +12,8 @@ $(() => {
   setAPIOrigin(location, config)
   authEvents.addHandlers()
   ballerboardEvents.addHandlers()
+  $('#sign-out').hide()
+  $('#change-password').hide()
 })
 //button to hopefully end up adding a player that has been created to the user's team
 
