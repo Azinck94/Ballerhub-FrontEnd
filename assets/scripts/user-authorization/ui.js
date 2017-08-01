@@ -19,6 +19,8 @@ const signInSuccess = (data) => {
   $('#sign-in').hide(1000)
   $('#sign-up').hide(1000)
   $('#baller-board').fadeIn(500).css('display', 'block')
+  $('#sign-out').show(1000)
+  $('#change-password').show(1000)
   // $('.sign-up-modal-header').text('')
   // $('.sign-in-modal-header').text('')
 }
