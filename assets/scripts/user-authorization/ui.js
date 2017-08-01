@@ -41,17 +41,18 @@ const signOutSuccess = () => {
   $('#sign-in').fadeIn(500).css('display', 'block')
   $('#sign-up').fadeIn(500).css('display', 'block')
   $('#baller-board').empty()
+  $('#sign-in-log').text('Signed Out')
 }
 
 const signOutFailure = () => {
 }
 
 const changePasswordSuccess = () => {
-$('#sign-in-log').text('Password changed successfully')
+$('#sign-in-log').text('Password changed ')
 }
 
 const changePasswordFailure = () => {
-  $('.baller-board').text('Password not changed successfully')
+  $('#sign-in-log').text('Password not changed ')
 }
 
 module.exports = {
