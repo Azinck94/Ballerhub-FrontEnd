@@ -2,6 +2,7 @@
 const store = require('../store')
 const showBallersTemplate = require('../templates/baller-database.handlebars')
 const createBallerSuccess = (data) => {
+  $('#sign-in-log').text('Baller deleted')
 }
 
 const createBallerFailure = (error) => {
@@ -27,9 +28,13 @@ const showAllBallersFailure = () => {
 }
 
 const deleteBallerSuccess = () => {
+  $('#sign-in-log').text('Baller deleted')
 }
 
 const deleteBallerFailure = () => {
+  $('.delete-baller').val('')
+  $('#delete-baller-modal').modal('hide')
+  $('#sign-in-log').text('That baller doesn\'t belong to you')
 }
 
 const updateBallerFailure = () => {

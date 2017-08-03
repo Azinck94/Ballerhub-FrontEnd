@@ -27,30 +27,3 @@ $(() => {
 
 // use require without a reference to ensure a file is bundled
 require('./example')
-
-$(() => {
-    authEvents.addHandlers();
-    ballerboardEvents.addHandlers();
-  // $('#select-sign-up').on('click', function(){
-  //   $('#sign-up-modal').modal('show');
-  });
-  $('.sign-up-btn').on('click', function(){
-    $('#sign-up').modal('hide');
-  });
-  $('#select-sign-in').on('click', function(){
-    $('#sign-in-modal').modal('show');
-  });
-  $('.sign-in-btn').on('click', function(){
-    $('#sign-in').modal('hide');
-  });
-  // $('#select-change-password').on('click', function(){
-  //   $('#change-password').modal('show');
-  // });
-  $('.change-password-btn').on('click', function(){
-    $('#change-password-modal').modal('hide');
- });
-    $('.sign-out-btn').on('click', function(){
-      $('#sign-out').modal('hide');
-       });
-
-require('./example')

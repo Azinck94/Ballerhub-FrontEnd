@@ -26,7 +26,9 @@ const onDeleteBaller = function (event) {
   const data = getFormFields(event.target)
 event.preventDefault()
 api.deleteBaller(data.baller.id)
-  onShowAllBallers(event)
+  .then(onShowAllBallers)
+  // .then(ui.deleteBallerSuccess)
+  .catch(ui.deleteBallerFailure)
 //   .catch(ui.deleteBallerFailure)
 }
 
