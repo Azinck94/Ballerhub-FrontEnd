@@ -10,7 +10,7 @@ const data = getFormFields(this)
   // const data = getFormFields(this)
   console.log(data)
   api.signUp(data)
-    .done(ui.success)
+    .done(ui.signUpSuccess)
     .fail(ui.signUpFailure)
 }
 
