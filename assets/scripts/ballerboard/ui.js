@@ -42,7 +42,7 @@ const updateBallerFailure = () => {
   $('#update-baller-modal').modal('hide')
   $('#sign-in-log').text('That baller doesn\'t belong to you')
 }
-}
+
 
 module.exports = {
   deleteBallerFailure,
