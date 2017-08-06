@@ -34,7 +34,7 @@ const deleteBallerSuccess = () => {
 const deleteBallerFailure = () => {
   $('.delete-baller').val('')
   $('#delete-baller-modal').modal('hide')
-  $('#sign-in-log').text('That baller doesn\'t belong to you')
+  $('#sign-in-log').text('')
 }
 
 const updateBallerFailure = () => {

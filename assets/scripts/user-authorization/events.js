@@ -5,13 +5,13 @@ const api = require('./api')
 const ui = require('./ui')
 
 const onSignUp = function (event) {
-const data = getFormFields(this)
   event.preventDefault()
+  const data = getFormFields(this)
   // const data = getFormFields(this)
   console.log(data)
   api.signUp(data)
-    .done(ui.signUpSuccess)
-    .fail(ui.signUpFailure)
+    .then(ui.signUpSuccess)
+    .catch(ui.signUpFailure)
 }
 
 const onSignIn = function (event) {
@@ -27,8 +27,8 @@ const onChangePassword = function onChangePassword(event){
   console.log(data);
   event.preventDefault();
   api.changePassword(data)
-    .done(ui.changePasswordSuccess)
-    .fail(ui.changePasswordFailure);
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure);
 };
 
 const onSignOut = function (event) {
