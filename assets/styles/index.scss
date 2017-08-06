@@ -3,7 +3,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 .jumbotron {
   background-image: url('./boban.jpg');
-  background-size: cover;
+  background-size: contain;
   height: 100vh;
 }
 
