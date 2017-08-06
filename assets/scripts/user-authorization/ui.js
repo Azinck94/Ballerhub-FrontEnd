@@ -57,10 +57,12 @@ const signOutFailure = () => {
 
 const changePasswordSuccess = () => {
 $('#sign-in-log').text('Password changed')
+$('.change-password').val('')
 }
 
 const changePasswordFailure = () => {
   $('#sign-in-log').text('Password not changed')
+  $('.change-password').val('')
 }
 
 module.exports = {
