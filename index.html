@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Baller Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+<div class="container">
+  <div class="row">
+    <div id="game-title" class="col-xs-27 box baller-board">
+      <h1>Baller-Hub</h1>
+      <h3>By Andrew Zinck</h3>
+    </div>
+  </div>
+</div>
+<!-- Game Text Box -->
+<!-- <div class="container">
+  <div class="row">
+    <div id="game-text" class="col-xs-27 box game-text-log">
+      <h3>By Andrew Zinck</h3>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="container">
+  <div class="row">
+    <div id="sign-in-log" class="col-xs-27 box game-log">
+      <h3>Please sign-in!</h3>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Sign up form -->
+<form id="sign-up">
+       <fieldset>
+         <legend>Sign up!</legend>
+         <input type="text" name="credentials[email]" value="" placeholder="email">
+         <input type="password" name="credentials[password]" value="" placeholder="password">
+         <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+         <input type="submit" name="submit" value="Sign up!">
+       </fieldset>
+     </form>
+
+     <form id="sign-in">
+       <fieldset>
+         <legend>Sign in!</legend>
+         <input type="text" name="credentials[email]" value="" placeholder="email">
+         <input type="password" name="credentials[password]" value="" placeholder="password">
+         <input type="submit" name="submit" value="Sign in!">
+       </fieldset>
+     </form>
+     <form id="change-password">
+       <fieldset>
+         <legend>Change Password</legend>
+         <input type="password" name="passwords[old]" value="" placeholder="Old Password">
+         <input type="password" name="passwords[new]" value="" placeholder="New Password">
+         <input type="submit" name="submit" value="Change Password">
+       </fieldset>
+     </form>
+     <form id="sign-out">
+       <fieldset>
+         <legend>Sign out!</legend>
+         <input type="submit" name="submit" value="Sign out!">
+       </fieldset>
+     </form>
+
+     <div class="jumbotron">
+     </div>
+
+  <!-- /.container-fluid -->
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div id="list-ballers-log" class="col-sm-9 box list-ballers-log">
+      <h3>Trust the Process</h3>
+    </div>
+  </div>
+</div> -->
+<!-- Gameboard -->
+<!-- Center block should help center, but am having trouble -->
+<!-- <div class="row">
+  <div id="box6" class="col-xs-27 box baller-board"></div> -->
+<!-- <div id="game-board" class="container">
+  <div class="row">
+    <div id="box0" class="col-xs-3 box game-cell"></div>
+    <div id="box1" class="col-xs-3 box game-cell"></div>
+    <div id="box2" class="col-xs-3 box game-cell"></div>
+  </div>
+  <div class="row">
+    <div id="box3" class="col-xs-3 box game-cell"></div>
+    <div id="box4" class="col-xs-3 box game-cell"></div>
+    <div id="box5" class="col-xs-3 box game-cell"></div>
+  </div>
+  <div class="row">
+    <div id="box6" class="col-xs-3 box game-cell"></div>
+    <div id="box7" class="col-xs-3 box game-cell"></div>
+    <div id="box8" class="col-xs-3 box game-cell"></div>
+  </div>
+</div> -->
+<!-- Standard button for new game -->
+<div class="baller-section" id="baller-section">
+<button id="ballers-list" type="button" class="btn btn-default">List Ballers</button>
+<div class="baller-content" id="baller-content">
+    </div>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-baller-modal">
+              Create baller
+        </button>
+          <div class="modal fade" id="create-baller-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Create baller</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+
+                <div class="modal-body">
+                  <form id="create-baller">
+                    <input class="create-baller" type="text" name="first_name" value="" placeholder="first_name">
+                    <input class="create-baller" type="text" name="last_name" value="" placeholder="last_name">
+                    <input class="create-baller" type="text" name="team" value="" placeholder="team">
+                    <input class="create-baller" type="text" name="position" value="" placeholder="position">
+                    <input class="create-baller" type="integer" name="buckets" value="" placeholder="points per game">
+                    <input class="create-baller" type="integer" name="rpg" value="" placeholder="rebounds per game">
+                    <input class="create-baller" type="integer" name="apg" value="" placeholder="assists per game">
+                    <input class="create-baller" type="text" name="sponsors" value="" placeholder="sponsors">
+                    <input class="create-baller" type="text" name="shoes" value="" placeholder="shoes">
+                    <input class="create-baller" type="text" name="catchphrase" value="" placeholder="catchphrase">
+                    <input type="submit" name="submit" value="Create Baller!">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete-baller-modal">
+    Delete Baller
+    </button>
+<div class="modal fade" id="delete-baller-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Baller</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+      </div>
+      <div class="modal-body">
+        <form id="delete-baller">
+          <input class="delete-baller" type="text" name="baller[id]" value="" placeholder="baller id">
+          <input type="submit" name="submit" value="Delete Baller">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#update-baller-modal">
+            Update Baller
+            </button>
+        <div class="modal fade" id="update-baller-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update baller</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+              </div>
+
+              <div class="modal-body">
+                <form id="update-baller">
+                  <input class="update-baller" type="text" name="id" value="" placeholder="baller[id]">
+                  <input class="update-baller" type="text" name="first_name" value="" placeholder="first_name">
+                  <input class="update-baller" type="text" name="last_name" value="" placeholder="last_name">
+                  <input class="update-baller" type="text" name="team" value="" placeholder="team">
+                  <input class="update-baller" type="text" name="position" value="" placeholder="position">
+                  <input class="update-baller" type="integer" name="buckets" value="" placeholder="points per game">
+                  <input class="update-baller" type="integer" name="rpg" value="" placeholder="rebounds per game">
+                  <input class="update-baller" type="integer" name="apg" value="" placeholder="assists per game">
+                  <input class="update-baller" type="text" name="sponsors" value="" placeholder="sponsors">
+                  <input class="update-baller" type="text" name="shoes" value="" placeholder="shoes">
+                  <input class="update-baller" type="text" name="catchphrase" value="" placeholder="catchphrase">
+                  <input type="submit" name="submit" value="Update Baller!">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<p>
+
+</p>
+
+  </body>          <!-- <body>  <p><a href="#"><span class="highlight"></span></a></p>
+                <span class="shadow"></span>
+              </body> -->
+
+</html>
