@@ -5,7 +5,7 @@ const api = require('./api')
 const ui = require('./ui')
 
 const onCreateBaller = function (event) {
-console.log('on createBaller invoked')
+// console.log('on createBaller invoked')
   const data = getFormFields(event.target)
   event.preventDefault()
   api.createBaller(data)
@@ -14,7 +14,7 @@ console.log('on createBaller invoked')
 }
 
 const onShowAllBallers = function (event) {
-  console.log('onShowAllBallers invoked')
+  // console.log('onShowAllBallers invoked')
   console.log(event.target)
   api.showAllBallers()
     .then(ui.showAllBallersSuccess)
@@ -22,7 +22,7 @@ const onShowAllBallers = function (event) {
 }
 
 const onDeleteBaller = function (event) {
-  console.log('delete is working')
+  // console.log('delete is working')
   const data = getFormFields(event.target)
 event.preventDefault()
 api.deleteBaller(data.baller.id)
@@ -33,9 +33,9 @@ api.deleteBaller(data.baller.id)
 }
 
 const onUpdateBaller = function (event) {
-  console.log('update is working')
+  // console.log('update is working')
   const data = getFormFields(event.target)
-  console.log(data)
+  // console.log(data)
   event.preventDefault()
   api.updateBaller(data)
     .then(onShowAllBallers)

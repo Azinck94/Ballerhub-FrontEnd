@@ -2,11 +2,11 @@
 const store = require('../store')
 
 const success = (data) => {
-  console.log(data)
+  // console.log(data)
 }
 
 const failure = (error) => {
-  console.error(error)
+  // console.error(error)
 }
 
 const signUpSuccess = () => {

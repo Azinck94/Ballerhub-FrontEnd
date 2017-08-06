@@ -6,11 +6,11 @@ const createBallerSuccess = (data) => {
 }
 
 const createBallerFailure = (error) => {
-  console.log(error)
+  // console.log(error)
 }
 
 const showAllBallersSuccess = (data) => {
-  console.log('ui running')
+  // console.log('ui running')
   store.ballers = data.ballers
   $('p').empty()
   $('.create-baller').val('')

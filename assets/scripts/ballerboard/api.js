@@ -6,8 +6,8 @@ const app =require('../app.js')
 
 
 const createBaller = (baller) => {
-  console.log('create entry in api running')
-  console.log(baller)
+  // console.log('create entry in api running')
+  // console.log(baller)
   const data = {
     baller: null
   }
@@ -34,7 +34,7 @@ const showAllBallers = function (data) {
 }
 
 const deleteBaller = function (data) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/ballers/' + data,
     method: 'DELETE',
@@ -45,8 +45,8 @@ const deleteBaller = function (data) {
 }
 
 const updateBaller = (baller) => {
-  console.log('update entry in api running')
-  console.log(baller)
+  // console.log('update entry in api running')
+  // console.log(baller)
   const data = {
     baller: null
   }
